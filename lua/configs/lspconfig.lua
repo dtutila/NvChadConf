@@ -29,7 +29,7 @@ lspconfig.solidity.setup {
   capabilities = capabilities,
   cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
   filetypes = { "solidity" },
-  root_dir = require("lspconfig.util").find_git_ancestor,
-  -- root_dir = root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml", "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
+  -- root_dir = require("lspconfig.util").find_git_ancestor,
+  root_dir = lspconfig.util.root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml", "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
   single_file_support = true,
 }
