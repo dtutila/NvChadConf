@@ -33,3 +33,11 @@ lspconfig.solidity.setup {
   root_dir = lspconfig.util.root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml", "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
   single_file_support = true,
 }
+
+--python
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  filetypes = {"python"}
+})

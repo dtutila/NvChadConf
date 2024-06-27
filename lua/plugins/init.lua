@@ -7,6 +7,14 @@ return {
     end,
   },
 
+  {
+    "nvimtools/none-ls.nvim",
+    ft = {"python"},
+    opts = function ()
+      return require "configs.null-ls"
+    end
+
+  },
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
@@ -24,7 +32,8 @@ return {
         "stylua",
   			"html-lsp",
         "css-lsp",
-        "prettier"
+        "prettier",
+        "pyright"
   		},
   	},
   },
